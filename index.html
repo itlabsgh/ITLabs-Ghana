@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLabs Ghana - Digital Transformation Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #6366F1 50%, #8B5CF6 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-dark">ITLabs Ghana</span>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#home" class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-section="home">Home</a>
+                        <a href="#services" class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-section="services">Services</a>
+                        <a href="#about" class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-section="about">About</a>
+                        <a href="#portfolio" class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-section="portfolio">Portfolio</a>
+                        <a href="#contact" class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-section="contact">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Get Started</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50" data-section="home">Home</a>
+                <a href="#services" class="nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50" data-section="services">Services</a>
+                <a href="#about" class="nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50" data-section="about">About</a>
+                <a href="#portfolio" class="nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50" data-section="portfolio">Portfolio</a>
+                <a href="#contact" class="nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50" data-section="contact">Contact</a>
+                <a href="#contact" class="block w-full text-center bg-primary text-white px-4 py-2 rounded-md text-base font-medium mt-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Digital Transformation For Your Business</h1>
+                    <p class="text-xl mb-8 opacity-90">We build custom websites, mobile apps, and SaaS solutions that drive growth and efficiency for businesses in Ghana and beyond.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md text-lg font-semibold text-center">Get Started</a>
+                        <a href="#portfolio" class="border-2 border-white text-white hover:bg-white hover:text-primary px-6 py-3 rounded-md text-lg font-semibold text-center">View Our Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Digital Transformation" class="rounded-lg shadow-xl animate-float w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-8">Trusted by innovative companies across Africa</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="flex justify-center items-center">
+                    <img src="https://images.unsplash.com/photo-1611162616475-465b187d38c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://images.unsplash.com/photo-1611162617263-4ec3060a058e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://images.unsplash.com/photo-1611162617263-4ec3060a058e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer comprehensive digital solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Website Development</h3>
+                    <p class="text-gray-600 mb-4">Custom websites designed for performance, security, and user experience that convert visitors into customers.</p>
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Website Development" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>SEO Optimized</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>E-commerce Solutions</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Mobile App Development</h3>
+                    <p class="text-gray-600 mb-4">Native and cross-platform mobile applications for iOS and Android that engage users and drive business growth.</p>
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App Development" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>iOS & Android</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>React Native & Flutter</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>API Integration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">SaaS Solutions</h3>
+                    <p class="text-gray-600 mb-4">Scalable cloud-based software solutions that automate processes and provide valuable insights for your business.</p>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SaaS Solutions" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Custom SaaS Platforms</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Subscription Management</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Multi-tenant Architecture</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-indigo-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">CRM Development</h3>
+                    <p class="text-gray-600 mb-4">Custom Customer Relationship Management systems to streamline your sales, marketing, and customer service.</p>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="CRM Development" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Lead Management</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Sales Pipeline</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Customer Analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search-dollar text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive digital marketing strategies to increase your online visibility and customer acquisition.</p>
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>SEO & Content Marketing</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Social Media Management</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>PPC Advertising</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">IT Consulting</h3>
+                    <p class="text-gray-600 mb-4">Expert advice and implementation services to help you leverage technology for business success.</p>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IT Consulting" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Technology Strategy</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Digital Transformation</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Cloud Migration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ITLabs Ghana Team" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-dark mb-6">About ITLabs Ghana</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2015, ITLabs Ghana is a leading technology solutions provider dedicated to helping businesses leverage digital technologies to achieve their goals.</p>
+                    <p class="text-gray-600 mb-6">Our team of experienced developers, designers, and strategists work collaboratively to deliver innovative solutions that drive real business results.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-dark mb-4">Our Mission</h3>
+                        <p class="text-gray-600">To empower businesses in Ghana and across Africa with cutting-edge digital solutions that enhance efficiency, drive growth, and create competitive advantages.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-primary text-3xl font-bold mb-2">50+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-primary text-3xl font-bold mb-2">15+</div>
+                            <div class="text-gray-600">Team Members</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-primary text-3xl font-bold mb-2">8</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-primary text-3xl font-bold mb-2">30+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-semibold">
+                        Contact Us
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Portfolio</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Explore some of our recent projects that showcase our expertise and creativity</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="E-commerce Website" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A custom online store with payment integration, inventory management, and analytics dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Website</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">E-commerce</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Payment Gateway</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Health & Fitness App</h3>
+                        <p class="text-gray-600 mb-4">A cross-platform mobile application for tracking workouts, nutrition, and health metrics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Mobile App</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">iOS</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Android</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SaaS Platform" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">HR Management SaaS</h3>
+                        <p class="text-gray-600 mb-4">A cloud-based human resources platform with employee management, payroll, and reporting.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SaaS</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Cloud</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">HR Tech</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="CRM System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Custom CRM Solution</h3>
+                        <p class="text-gray-600 mb-4">A tailored customer relationship management system for a financial services company.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CRM</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Sales</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Analytics</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Education Platform" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">E-Learning Platform</h3>
+                        <p class="text-gray-600 mb-4">An online education platform with course management, video streaming, and assessments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">EdTech</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">LMS</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Video</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Restaurant App" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Restaurant Management</h3>
+                        <p class="text-gray-600 mb-4">A complete solution for restaurant operations including POS, inventory, and customer loyalty.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">POS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Hospitality</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Mobile</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Case Study →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-semibold">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-lg opacity-90 max-w-3xl mx-auto">Don't just take our word for it - hear from some of our satisfied clients</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Kwame Osei</h4>
+                            <p class="text-sm opacity-80">CEO, Retail Solutions</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"ITLabs transformed our e-commerce platform, resulting in a 300% increase in online sales within the first six months. Their team was professional, responsive, and delivered beyond our expectations."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ama Mensah</h4>
+                            <p class="text-sm opacity-80">Director, HealthPlus</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"The mobile app developed by ITLabs has revolutionized how we deliver healthcare services to our patients. The user experience is seamless, and their ongoing support has been exceptional."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Yaw Boateng</h4>
+                            <p class="text-sm opacity-80">CTO, FinTech Africa</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"We partnered with ITLabs to build our SaaS platform, and their technical expertise was evident throughout the project. They delivered a scalable, secure solution that has helped us acquire customers across 5 countries."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Development Process</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">A structured approach to ensure quality, transparency, and successful project delivery</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-gray-200 transform -translate-x-1/2"></div>
+                
+                <!-- Process Steps -->
+                <div class="space-y-24 relative">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <h3 class="text-xl font-bold text-dark mb-2">Discovery & Planning</h3>
+                            <p class="text-gray-600">We start by understanding your business goals, target audience, and technical requirements to create a comprehensive project plan.</p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center md:justify-start">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">1</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-primary animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 flex justify-center md:justify-end order-2 md:order-1">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-secondary flex items-center justify-center text-white font-bold text-xl shadow-lg">2</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-secondary animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 text-center md:text-left order-1 md:order-2">
+                            <h3 class="text-xl font-bold text-dark mb-2">Design & Prototyping</h3>
+                            <p class="text-gray-600">Our designers create wireframes and prototypes to visualize the user experience and interface before development begins.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <h3 class="text-xl font-bold text-dark mb-2">Development</h3>
+                            <p class="text-gray-600">Our developers implement the solution using modern technologies, following agile methodologies for iterative progress.</p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center md:justify-start">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-accent flex items-center justify-center text-white font-bold text-xl shadow-lg">3</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-accent animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 flex justify-center md:justify-end order-2 md:order-1">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">4</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-yellow-500 animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 text-center md:text-left order-1 md:order-2">
+                            <h3 class="text-xl font-bold text-dark mb-2">Testing & Quality Assurance</h3>
+                            <p class="text-gray-600">We rigorously test the solution across devices and scenarios to ensure performance, security, and bug-free operation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <h3 class="text-xl font-bold text-dark mb-2">Deployment & Launch</h3>
+                            <p class="text-gray-600">We handle the deployment process and ensure a smooth transition to production with minimal downtime.</p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center md:justify-start">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">5</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-purple-500 animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 6 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 flex justify-center md:justify-end order-2 md:order-1">
+                            <div class="relative">
+                                <div class="h-16 w-16 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">6</div>
+                                <div class="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-green-500 animate-ping opacity-75"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 text-center md:text-left order-1 md:order-2">
+                            <h3 class="text-xl font-bold text-dark mb-2">Support & Maintenance</h3>
+                            <p class="text-gray-600">We provide ongoing support, updates, and enhancements to keep your solution performing optimally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">Let's discuss how we can help you achieve your digital goals. Contact us today for a free consultation.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-semibold">Get Started</a>
+                <a href="tel:+233123456789" class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md text-lg font-semibold">
+                    <i class="fas fa-phone mr-2"></i> +233 123 456 789
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">Have a project in mind or questions about our services? Fill out the form or contact us directly.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-dark mb-1">Our Location</h3>
+                                <p class="text-gray-600">123 Tech Street, Accra, Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-dark mb-1">Email Us</h3>
+                                <p class="text-gray-600">info@itlabsghana.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-dark mb-1">Call Us</h3>
+                                <p class="text-gray-600">+233 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-dark mb-1">Working Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-dark mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center text-gray-600">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center text-gray-600">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center text-gray-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center text-gray-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+233 123 456 789">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select a service</option>
+                                <option value="website">Website Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="saas">SaaS Development</option>
+                                <option value="crm">CRM Development</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="consulting">IT Consulting</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-md text-lg font-semibold">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">ITLabs Ghana</h3>
+                    <p class="text-gray-400 mb-6">Leading technology solutions provider helping businesses in Ghana and across Africa achieve digital transformation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Website Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">SaaS Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">CRM Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#privacy" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#terms" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#cookies" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 ITLabs Ghana. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Page (hidden by default) -->
+    <div id="privacy-page" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto p-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-dark">Privacy Policy</h2>
+                <button onclick="hidePage('privacy-page')" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="prose max-w-none">
+                <h3>1. Introduction</h3>
+                <p>ITLabs Ghana ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                
+                <h3>2. Information We Collect</h3>
+                <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                <ul>
+                    <li>Register on our website</li>
+                    <li>Request information about our services</li>
+                    <li>Subscribe to our newsletter</li>
+                    <li>Contact us through our website</li>
+                </ul>
+                <p>The types of personal information we may collect include:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Email address</li>
+                    <li>Phone number</li>
+                    <li>Company name</li>
+                    <li>Any other information you choose to provide</li>
+                </ul>
+                
+                <h3>3. How We Use Your Information</h3>
+                <p>We may use the information we collect for various purposes, including to:</p>
+                <ul>
+                    <li>Provide, operate, and maintain our services</li>
+                    <li>Improve, personalize, and expand our services</li>
+                    <li>Understand and analyze how you use our services</li>
+                    <li>Develop new products, services, features, and functionality</li>
+                    <li>Communicate with you for customer service, updates, and marketing purposes</li>
+                    <li>Send you emails</li>
+                    <li>Find and prevent fraud</li>
+                </ul>
+                
+                <h3>4. Sharing Your Information</h3>
+                <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.</p>
+                
+                <h3>5. Data Security</h3>
+                <p>We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information.</p>
+                
+                <h3>6. Changes to This Privacy Policy</h3>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                
+                <h3>7. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p>ITLabs Ghana<br>
+                123 Tech Street<br>
+                Accra, Ghana<br>
+                Email: privacy@itlabsghana.com<br>
+                Phone: +233 123 456 789</p>
+            </div>
+            
+            <div class="mt-8">
+                <button onclick="hidePage('privacy-page')" class="bg-primary hover:bg-blue-700 text-white px-6 py-2 rounded-md">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Page (hidden by default) -->
+    <div id="terms-page" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto p-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-dark">Terms of Service</h2>
+                <button onclick="hidePage('terms-page')" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="prose max-w-none">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing or using ITLabs Ghana's services, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our services.</p>
+                
+                <h3>2. Service Description</h3>
+                <p>ITLabs Ghana provides web and mobile development, digital solutions, and IT consulting services as described on our website. We reserve the right to modify or discontinue services at any time.</p>
+                
+                <h3>3. User Responsibilities</h3>
+                <p>You agree to provide accurate information and maintain the security of your account credentials. Any misuse of our services may result in termination of access.</p>
+                
+                <h3>4. Intellectual Property</h3>
+                <p>All content and technology developed by ITLabs Ghana remains our exclusive property until full payment is received and ownership is formally transferred.</p>
+                
+                <h3>5. Payments & Refunds</h3>
+                <p>Payment terms will be specified in individual project contracts. We offer refunds only as specified in written agreements.</p>
+                
+                <h3>6. Limitation of Liability</h3>
+                <p>ITLabs Ghana shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
+                
+                <h3>7. Governing Law</h3>
+                <p>These terms shall be governed by the laws of Ghana. Any disputes will be resolved in the courts of Accra.</p>
+                
+                <h3>8. Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of services constitutes acceptance of revised terms.</p>
+            </div>
+            
+            <div class="mt-8">
+                <button onclick="hidePage('terms-page')" class="bg-primary hover:bg-blue-700 text-white px-6 py-2 rounded-md">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add JavaScript before closing body tag -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Modal handling functions
+        function showPage(pageId) {
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+
+        function hidePage(pageId) {
+            document.getElementById(pageId).classList.add('hidden');
+        }
+
+        // Navigation active state handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Function to update active state
+            function updateActiveState() {
+                const hash = window.location.hash || '#home';
+                const section = hash.substring(1);
+                
+                navLinks.forEach(link => {
+                    const linkSection = link.getAttribute('data-section');
+                    if (linkSection === section) {
+                        link.classList.add('text-primary', 'border-b-2', 'border-primary');
+                        link.classList.remove('text-gray-500');
+                    } else {
+                        link.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                        link.classList.add('text-gray-500');
+                    }
+                });
+            }
+
+            // Update active state on page load
+            updateActiveState();
+
+            // Update active state on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    const linkSection = link.getAttribute('data-section');
+                    if (linkSection === currentSection) {
+                        link.classList.add('text-primary', 'border-b-2', 'border-primary');
+                        link.classList.remove('text-gray-500');
+                    } else {
+                        link.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                        link.classList.add('text-gray-500');
+                    }
+                });
+            });
+
+            // Update active state when clicking navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => {
+                        l.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                        l.classList.add('text-gray-500');
+                    });
+                    this.classList.add('text-primary', 'border-b-2', 'border-primary');
+                    this.classList.remove('text-gray-500');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
